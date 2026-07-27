@@ -1,0 +1,425 @@
+[
+{
+"category": "Allergy",
+"brand": "Allegra 120",
+"generic": "Fexofenadine 120 mg",
+"badge": "OTC",
+"used_for": [
+"Allergic rhinitis",
+"Sneezing",
+"Runny nose",
+"Dust allergies"
+],
+"dosage": "1 tablet once daily as needed",
+"max_dose": null,
+"precautions": [
+"Avoid taking with fruit juices (especially grapefruit or apple)"
+],
+"side_effects": [
+"Mild headache",
+"Dry mouth"
+],
+"doctor_if": [
+"Symptoms persist despite use",
+"Signs of severe allergic reaction occur"
+]
+},
+{
+"category": "Pain & Inflammation",
+"brand": "Combiflam",
+"generic": "Ibuprofen 400 mg + Paracetamol 325 mg",
+"badge": "OTC",
+"used_for": [
+"Body aches",
+"Joint pain",
+"Headache",
+"Muscle sprains"
+],
+"dosage": "1 tablet after food, up to twice daily",
+"max_dose": null,
+"precautions": [
+"Do not take on an empty stomach",
+"Avoid if you have dengue"
+],
+"side_effects": [
+"Acidity",
+"Stomach upset"
+],
+"doctor_if": [
+"Fever persists for more than 3 days",
+"Pain persists for more than 10 days"
+]
+},
+{
+"category": "Cough",
+"brand": "Ascoril D Plus",
+"generic": "Dextromethorphan + Chlorpheniramine + Phenylephrine",
+"badge": "OTC",
+"used_for": [
+"Dry cough"
+],
+"dosage": "5-10 mL twice daily",
+"max_dose": null,
+"precautions": [
+"May cause drowsiness",
+"Do not drive after taking"
+],
+"side_effects": [
+"Sleepiness",
+"Dry mouth"
+],
+"doctor_if": [
+"Cough persists for more than 7 days",
+"Cough is accompanied by high fever or green phlegm"
+]
+},
+{
+"category": "Eye Care",
+"brand": "Refresh Tears",
+"generic": "Carboxymethylcellulose 0.5%",
+"badge": "OTC",
+"used_for": [
+"Dry eyes",
+"Eye irritation",
+"Tired eyes"
+],
+"dosage": "1-2 drops in each eye as needed",
+"max_dose": null,
+"precautions": [
+"Do not touch the dropper tip to the eye",
+"Discard 30 days after opening"
+],
+"side_effects": [
+"Temporary blurred vision"
+],
+"doctor_if": [
+"Eye pain occurs",
+"Changes in vision occur",
+"Irritation worsens or persists for more than 72 hours"
+]
+},
+{
+"category": "Acne",
+"brand": "Benzac AC 2.5% Gel",
+"generic": "Benzoyl Peroxide 2.5%",
+"badge": "OTC",
+"used_for": [
+"Acne",
+"Pimples"
+],
+"dosage": "Apply a small amount to affected area at night",
+"max_dose": null,
+"precautions": [
+"May bleach fabrics",
+"Use sunscreen during the day",
+"May cause dryness"
+],
+"side_effects": [
+"Peeling",
+"Redness",
+"Dry skin"
+],
+"doctor_if": [
+"Severe skin irritation develops",
+"No improvement after 6 weeks of use"
+]
+},
+{
+"category": "First Aid",
+"brand": "Hansaplast Washproof",
+"generic": "Adhesive bandage",
+"badge": "OTC",
+"used_for": [
+"Small cuts",
+"Minor abrasions"
+],
+"dosage": "Apply as needed",
+"max_dose": null,
+"precautions": [
+"Clean and dry wound before application",
+"Change dressing daily or when wet"
+],
+"side_effects": [],
+"doctor_if": [
+"Signs of infection appear (redness, warmth, pus)",
+"Wound is deep or gaping"
+]
+},
+{
+"category": "Wound Care",
+"brand": "Betadine Ointment",
+"generic": "Povidone-Iodine 10%",
+"badge": "OTC",
+"used_for": [
+"Cuts",
+"Scrapes",
+"Minor burns"
+],
+"dosage": "Apply a thin layer after cleaning the wound",
+"max_dose": null,
+"precautions": [
+"Do not use if allergic to iodine"
+],
+"side_effects": [
+"Temporary skin discoloration"
+],
+"doctor_if": [
+"Deep or puncture wounds",
+"Animal bites",
+"Serious burns",
+"Signs of infection appear"
+]
+},
+{
+"category": "Sore Throat",
+"brand": "Strepsils",
+"generic": "Amylmetacresol + Dichlorobenzyl Alcohol",
+"badge": "OTC",
+"used_for": [
+"Sore throat",
+"Scratchy throat"
+],
+"dosage": "1 lozenge every 3-4 hours",
+"max_dose": null,
+"precautions": [
+"Do not chew the lozenges"
+],
+"side_effects": [],
+"doctor_if": [
+"Sore throat persists for more than 2 days",
+"Accompanied by fever, headache, or nausea"
+]
+},
+{
+"category": "Fungal Infection",
+"brand": "Candid Dusting Powder",
+"generic": "Clotrimazole 1%",
+"badge": "OTC",
+"used_for": [
+"Sweat rash",
+"Ringworm",
+"Athlete's foot"
+],
+"dosage": "Apply twice daily to affected area",
+"max_dose": null,
+"precautions": [
+"For external use only"
+],
+"side_effects": [
+"Mild skin irritation"
+],
+"doctor_if": [
+"Condition worsens",
+"No improvement after 2 weeks of use"
+]
+},
+{
+"category": "Acidity",
+"brand": "Gelusil",
+"generic": "Aluminum Hydroxide + Magnesium Hydroxide + Simethicone",
+"badge": "OTC",
+"used_for": [
+"Acidity",
+"Heartburn",
+"Indigestion"
+],
+"dosage": "Chew 1-2 tablets after meals or as needed",
+"max_dose": null,
+"precautions": [
+"Do not take within 2 hours of other medications"
+],
+"side_effects": [
+"Constipation",
+"Diarrhea"
+],
+"doctor_if": [
+"Symptoms persist for more than 2 weeks",
+"Difficulty swallowing occurs"
+]
+},
+{
+"category": "Diarrhea",
+"brand": "Imodium",
+"generic": "Loperamide",
+"badge": "OTC",
+"used_for": [
+"Acute watery diarrhea"
+],
+"dosage": "As needed",
+"max_dose": "4 capsules/day",
+"precautions": [
+"Do not use if fever is present",
+"Do not use if blood is present in stool"
+],
+"side_effects": [
+"Constipation",
+"Dizziness",
+"Abdominal discomfort"
+],
+"doctor_if": [
+"Fever with diarrhea",
+"Blood in stool"
+]
+},
+{
+"category": "Pain & Fever",
+"brand": "Dolo 650",
+"generic": "Paracetamol 650 mg",
+"badge": "OTC",
+"used_for": [
+"Fever",
+"Pain"
+],
+"dosage": "As needed",
+"max_dose": "4 tablets/day",
+"precautions": [
+"Do not exceed maximum daily limit",
+"Avoid alcohol consumption"
+],
+"side_effects": [],
+"doctor_if": [
+"Fever persists for more than 3 days",
+"Pain persists for more than 10 days"
+]
+},
+{
+"category": "Rehydration",
+"brand": "Electral",
+"generic": "Oral Rehydration Salts",
+"badge": "OTC",
+"used_for": [
+"Dehydration",
+"Diarrhea",
+"Heat exhaustion"
+],
+"dosage": "Use as directed on sachet",
+"max_dose": null,
+"precautions": [
+"Reconstitute only in safe, potable water",
+"Do not boil the reconstituted solution",
+"Discard unused solution after 24 hours"
+],
+"side_effects": [],
+"doctor_if": [
+"Diarrhea lasts more than 24 hours",
+"Signs of severe dehydration appear",
+"Inability to keep oral fluids down"
+]
+},
+{
+"category": "Constipation",
+"brand": "Freego Powder",
+"generic": "Lactitol Monohydrate + Ispaghula Husk",
+"badge": "OTC",
+"used_for": [
+"Constipation"
+],
+"dosage": "Use as directed",
+"max_dose": null,
+"precautions": [
+"Drink plenty of water"
+],
+"side_effects": [
+"Bloating",
+"Flatulence",
+"Abdominal cramps"
+],
+"doctor_if": [
+"Constipation persists for more than 1 week",
+"Rectal bleeding occurs",
+"Severe abdominal pain"
+]
+},
+{
+"category": "Muscle Pain",
+"brand": "Volini",
+"generic": "Diclofenac",
+"badge": "OTC",
+"used_for": [
+"Muscle pain",
+"Sprains"
+],
+"dosage": "Apply topically as needed",
+"max_dose": null,
+"precautions": [
+"Wash hands after application"
+],
+"side_effects": [
+"Local skin irritation",
+"Redness at application site"
+],
+"doctor_if": [
+"Condition does not improve after 7 days",
+"Severe skin irritation develops"
+]
+},
+{
+"category": "Nasal Congestion",
+"brand": "Otrivin Oxy",
+"generic": "Oxymetazoline Hydrochloride",
+"badge": "OTC",
+"used_for": [
+"Blocked nose"
+],
+"dosage": "Use as directed",
+"max_dose": null,
+"precautions": [
+"Do not use for more than 3-5 consecutive days"
+],
+"side_effects": [
+"Rebound congestion with prolonged use"
+],
+"doctor_if": [
+"Congestion persists after 3 to 5 days of use",
+"Nasal bleeding occurs"
+]
+},
+{
+"category": "Burn Care",
+"brand": "Silverex",
+"generic": "Silver Nitrate Gel",
+"badge": "OTC",
+"used_for": [
+"Minor burns"
+],
+"dosage": "Apply after cooling burn under running water for 10 minutes",
+"max_dose": null,
+"precautions": [
+"For external use only",
+"Avoid contact with eyes"
+],
+"side_effects": [
+"Temporary skin staining",
+"Mild local irritation"
+],
+"doctor_if": [
+"Burn is severe or covers a large area",
+"Signs of infection appear"
+]
+},
+{
+"category": "Bruise & Vein Care",
+"brand": "Thrombophob",
+"generic": "Heparin Sodium + Benzyl Nicotinate",
+"badge": "OTC",
+"used_for": [
+"Bruises",
+"Superficial thrombophlebitis",
+"Injection site reactions"
+],
+"dosage": "Apply a thin layer to the affected area 2-3 times daily",
+"max_dose": null,
+"precautions": [
+"Do not apply to open wounds or broken skin",
+"For external use only"
+],
+"side_effects": [
+"Local skin irritation",
+"Redness"
+],
+"doctor_if": [
+"Condition does not improve",
+"Severe skin irritation develops"
+]
+}
+]

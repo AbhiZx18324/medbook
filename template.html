@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Medical Reference</title>
+</head>
+<body>
+
+    <!-- COVER PAGE -->
+    <div class="cover-page page-break-after">
+        <div class="cover-content">
+            <div class="cover-icon">⚕️</div>
+            <h1 class="cover-title">Home Medical Reference</h1>
+            <h2 class="cover-subtitle">A Quick Guide to Household Medicines</h2>
+            <p class="cover-purpose">This handbook provides quick, easy-to-read information on common over-the-counter and basic prescription medications for emergency and household use.</p>
+            <div class="cover-meta">
+                <p>Version: {{ version }}</p>
+                <p>Generated: {{ generation_date }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc-page page-break-after">
+        <h1 class="section-title">Table of Contents</h1>
+        <ul class="toc-list">
+            <li><a href="#quick-reference">Quick Reference Guide</a></li>
+            {% for category in grouped_medicines.keys()|sort %}
+            <li><a href="#cat-{{ category|slugify }}">{{ category }}</a></li>
+            {% endfor %}
+            <li><a href="#safety-rules">General Safety Rules</a></li>
+        </ul>
+    </div>
+
+    <!-- QUICK REFERENCE CHEAT SHEET -->
+    <div id="quick-reference" class="page-break-after">
+        <h1 class="section-title">Quick Reference Guide</h1>
+        <p class="section-description">Lookup a primary symptom to find the recommended household medicine.</p>
+        
+        <table class="quick-ref-table">
+            <thead>
+                <tr>
+                    <th>SYMPTOM / NEED</th>
+                    <th>MEDICINE (BRAND)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in quick_reference %}
+                <tr>
+                    <td>{{ item.symptom }}</td>
+                    <td><strong>{{ item.medicine }}</strong></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- MEDICINE CATEGORIES & CARDS -->
+    {% for category, meds in grouped_medicines.items()|sort %}
+    <div class="category-section" id="cat-{{ category|slugify }}">
+        <h1 class="category-title">{{ category }}</h1>
+        <p class="category-meta">{{ meds|length }} Medicine{% if meds|length > 1 %}s{% endif %}</p>
+        <hr class="category-divider">
+
+        {% for med in meds %}
+        <div class="medicine-card">
+            <div class="card-header">
+                <div class="brand-name">💊 {{ med.brand }}</div>
+                <div class="badge">{{ med.badge }}</div>
+            </div>
+            <div class="generic-name">🧬 {{ med.generic }}</div>
+            
+            <div class="card-body">
+                <div class="data-group">
+                    <div class="data-label">🎯 Used For</div>
+                    <ul class="data-list">
+                        {% for use in med.used_for %}<li>{{ use }}</li>{% endfor %}
+                    </ul>
+                </div>
+
+                <div class="data-group">
+                    <div class="data-label">💡 How to Use</div>
+                    <p class="data-text">{{ med.dosage }}</p>
+                </div>
+
+                <div class="data-group warning-group">
+                    <div class="data-label">⚠ Precautions</div>
+                    <ul class="data-list">
+                        {% for prec in med.precautions %}<li>{{ prec }}</li>{% endfor %}
+                    </ul>
+                </div>
+
+                <div class="data-group">
+                    <div class="data-label">❗ Side Effects</div>
+                    <ul class="data-list">
+                        {% for side in med.side_effects %}<li>{{ side }}</li>{% endfor %}
+                    </ul>
+                </div>
+
+                <div class="data-group alert-group">
+                    <div class="data-label">🚑 See a Doctor If</div>
+                    <ul class="data-list">
+                        {% for doc in med.doctor_if %}<li>{{ doc }}</li>{% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+    <!-- SAFETY SECTION -->
+    <div id="safety-rules" class="page-break-before safety-section">
+        <div class="safety-box">
+            <h1 class="section-title">General Safety Rules</h1>
+            
+            <h3>1. Responsible OTC Use</h3>
+            <p>Over-the-counter (OTC) medicines treat symptoms, not underlying diseases. If symptoms persist beyond a few days, stop self-medicating and seek medical advice.</p>
+            
+            <h3>2. Antibiotics & Steroids</h3>
+            <p><strong>Never self-prescribe antibiotics or steroid creams.</strong> Improper use leads to antibiotic resistance and severe skin thinning. Only take these under direct medical supervision and always complete the full course as prescribed.</p>
+            
+            <h3>3. Storage & Expiry</h3>
+            <ul>
+                <li>Store all medicines in a cool, dry place away from direct sunlight.</li>
+                <li>Keep out of reach of children and pets.</li>
+                <li>Never consume expired medicines. Check dates every 6 months and discard safely.</li>
+            </ul>
+
+            <h3>4. Hydration</h3>
+            <p>When battling fevers, diarrhoea, or vomiting, maintaining hydration is often more critical than the medication itself. Use ORS (Oral Rehydration Salts) rather than plain water to replenish electrolytes.</p>
+            
+            <h3>5. When Self-Medication is Inappropriate</h3>
+            <p>Proceed immediately to a clinic or ER if you experience: chest pain, sudden severe headache, difficulty breathing, unexplainable rash, sustained high fever (>103°F/39.4°C), or confusion.</p>
+
+            <div class="disclaimer">
+                <strong>Disclaimer:</strong> This handbook is for informational purposes only and does not replace professional medical advice, diagnosis, or treatment.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

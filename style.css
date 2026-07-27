@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Base Typography & Colors (Optimized for B&W & Subtle Print)
+   ========================================================================== */
+:root {
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --bg-page: #ffffff;
+    --border-light: #e0e0e0;
+    
+    /* Subtle accents that print well in B&W (as grays) and Color */
+    --accent-blue: #2c5282;
+    --accent-red: #9b2c2c;
+    --accent-bg: #f7fafc;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    color: var(--text-main);
+    background: var(--bg-page);
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   WeasyPrint Paged Media (Print Layout)
+   ========================================================================== */
+@page {
+    size: A4 portrait;
+    margin: 20mm 20mm 25mm 20mm;
+    
+    @bottom-center {
+        content: counter(page);
+        font-family: sans-serif;
+        font-size: 9pt;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border-light);
+        padding-top: 2mm;
+    }
+}
+
+/* No page numbers on the cover page */
+@page:first {
+    @bottom-center { content: normal; }
+    margin: 0; /* Full bleed for cover */
+}
+
+/* Prevent typography orphans and widows */
+p, li, ul, h1, h2, h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+/* Structure utilities */
+.page-break-after { page-break-after: always; }
+.page-break-before { page-break-before: always; }
+hr {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: 15px 0;
+}
+
+/* ==========================================================================
+   Cover Page
+   ========================================================================== */
+.cover-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Translated to physical page height by WeasyPrint */
+    text-align: center;
+    padding: 20mm;
+}
+.cover-icon {
+    font-size: 48pt;
+    margin-bottom: 20px;
+}
+.cover-title {
+    font-size: 32pt;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+.cover-subtitle {
+    font-size: 16pt;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin: 0 0 40px 0;
+}
+.cover-purpose {
+    font-size: 12pt;
+    max-width: 400px;
+    margin: 0 auto 60px auto;
+    color: var(--text-main);
+}
+.cover-meta {
+    font-size: 9pt;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.toc-list li {
+    margin-bottom: 12px;
+    font-size: 12pt;
+    font-weight: 500;
+}
+.toc-list a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+/* WeasyPrint CSS pseudo-elements for dotted leaders and page numbers */
+.toc-list a::after {
+    content: leader('.') target-counter(attr(href), page);
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Quick Reference Sheet
+   ========================================================================== */
+.quick-ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    page-break-inside: avoid;
+}
+.quick-ref-table th, .quick-ref-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+}
+.quick-ref-table th {
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    background-color: var(--accent-bg);
+}
+.quick-ref-table td {
+    font-size: 11pt;
+}
+
+/* ==========================================================================
+   Categories & Medicine Cards
+   ========================================================================== */
+.category-section {
+    /* Forces every new category to start at the top of a new page */
+    page-break-before: always;
+    break-before: page;
+}
+
+.category-title {
+    font-size: 20pt;
+    margin: 0 0 5px 0;
+    color: var(--accent-blue);
+    page-break-after: avoid;
+    break-after: avoid;
+}
+.category-meta {
+    font-size: 10pt;
+    color: var(--text-muted);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+/* Cards */
+.medicine-card {
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    /* CRITICAL: Never split a card across pages */
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.brand-name {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--text-main);
+}
+.badge {
+    background: var(--text-main);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+.generic-name {
+    font-size: 10pt;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-light);
+}
+
+/* Data Layout inside cards */
+.card-body {
+    display: block;
+}
+.data-group {
+    margin-bottom: 12px;
+}
+.data-group:last-child {
+    margin-bottom: 0;
+}
+.data-label {
+    font-size: 9pt;
+    font-weight: bold;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.data-text, .data-list {
+    margin: 0;
+    font-size: 10pt;
+}
+.data-list {
+    padding-left: 20px;
+}
+.data-list li {
+    margin-bottom: 3px;
+}
+
+/* Specific highlight groups */
+.alert-group .data-label { color: var(--accent-red); }
+.warning-group .data-label { color: #8a6d3b; }
+
+/* ==========================================================================
+   Safety Section
+   ========================================================================== */
+.safety-section {
+    padding: 20px 0;
+}
+.safety-box {
+    background-color: var(--accent-bg);
+    border: 1px solid var(--border-light);
+    padding: 30px;
+    border-radius: 8px;
+}
+.safety-box h3 {
+    font-size: 12pt;
+    margin: 20px 0 8px 0;
+    color: var(--accent-blue);
+    page-break-after: avoid;
+}
+.disclaimer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid var(--text-main);
+    font-size: 9pt;
+    font-weight: bold;
+    text-align: center;
+}
