@@ -59,7 +59,7 @@
     {% for category, meds in grouped_medicines.items()|sort %}
     <div class="category-section" id="cat-{{ category|slugify }}">
         <h1 class="category-title">{{ category }}</h1>
-        <p class="category-meta">{{ meds|length }} Medicine{% if meds|length > 1 %}s{% endif %}</p>
+        <!-- <p class="category-meta">{{ meds|length }} Medicine{% if meds|length > 1 %}s{% endif %}</p> -->
         <hr class="category-divider">
 
         {% for med in meds %}
@@ -80,7 +80,7 @@
 
                 <div class="data-group">
                     <div class="data-label">💡 How to Use</div>
-                    <p class="data-text">{{ med.dosage }}</p>
+                    <p class="data-text" style="margin-left: 20px;">{{ med.dosage }}</p>
                 </div>
 
                 <div class="data-group warning-group">

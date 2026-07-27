@@ -129,12 +129,29 @@ hr {
 /* ==========================================================================
    Quick Reference Sheet
    ========================================================================== */
+   #quick-reference {
+    /* Always start the Quick Reference section on a fresh page */
+    page-break-before: always;
+    break-before: page;
+}
+
+.section-title, 
+.section-description {
+    /* Glue the headings to the table so they never split */
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
 .quick-ref-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    page-break-inside: avoid;
 }
+
+.quick-ref-table thead {
+    display: table-header-group; 
+}
+
 .quick-ref-table th, .quick-ref-table td {
     padding: 12px 15px;
     text-align: left;
